@@ -1,0 +1,109 @@
+{
+  "_comentario_general": "Archivo de configuración de fechas para generar_calendario.py. INSTRUCCIÓN: No correr el script hasta tener los boletos de avión comprados. Luego editar todos los valores marcados como TENTATIVO con los horarios reales y correr: python3 generar_calendario.py",
+
+  "fecha_inicio_viaje": "2027-05-19",
+  "fecha_fin_viaje": "2027-06-06",
+
+  "zona_horaria_mexico": "America/Tijuana",
+  "zona_horaria_china": "Asia/Shanghai",
+  "utc_offset_china": 8,
+  "utc_offset_mexico_verano": -7,
+
+  "viajeros": ["Nadia", "Roberto"],
+
+  "vuelos": {
+    "salida_tijuana": {
+      "_comentario": "TENTATIVO — rellenar con horario real al comprar boletos. Hainan Airlines TIJ-PEK.",
+      "fecha": "2027-05-19",
+      "hora_salida": "TENTATIVO",
+      "aeropuerto_origen": "TIJ",
+      "aeropuerto_nombre": "Aeropuerto Internacional de Tijuana",
+      "aerolinea": "Hainan Airlines",
+      "numero_vuelo": "TENTATIVO",
+      "clase": "Premium Economy",
+      "duracion_horas": 13,
+      "nota": "Llegar al aeropuerto 3h antes; cruzar el CBX desde San Diego al menos 4h antes del vuelo"
+    },
+    "llegada_beijing": {
+      "_comentario": "TENTATIVO — rellenar con horario real al comprar boletos. La hora de llegada a PEK depende de la salida real de TIJ.",
+      "fecha": "2027-05-21",
+      "hora_llegada": "TENTATIVO",
+      "aeropuerto_destino": "PEK",
+      "aeropuerto_nombre": "Aeropuerto Internacional Capital de Beijing",
+      "nota": "Cruzar la línea de cambio de fecha durante el vuelo; el día 20 se pierde en tránsito"
+    },
+    "vuelo_interno_chengdu_shanghai": {
+      "_comentario": "TENTATIVO — rellenar con horario real al comprar boletos. Vuelo doméstico CTU/TFU a PVG aprox el 31 de mayo.",
+      "fecha": "2027-05-31",
+      "hora_salida": "TENTATIVO",
+      "hora_llegada": "TENTATIVO",
+      "aeropuerto_origen": "TFU",
+      "aeropuerto_origen_nombre": "Aeropuerto Internacional Tianfu de Chengdu",
+      "aeropuerto_destino": "PVG",
+      "aeropuerto_destino_nombre": "Aeropuerto Internacional Pudong de Shanghai",
+      "aerolinea": "TENTATIVO — Air China / Sichuan Airlines / China Eastern",
+      "numero_vuelo": "TENTATIVO",
+      "clase": "Primera fila o clase business si disponible en doméstico",
+      "duracion_horas": 2.5,
+      "nota": "Salir del hotel Chengdu con 3.5h de anticipación; Metro L18 al aeropuerto TFU o DiDi"
+    },
+    "salida_shanghai_pvg": {
+      "_comentario": "TENTATIVO — rellenar con horario real al comprar boletos. Vuelo regreso PVG-LAX.",
+      "fecha": "2027-06-06",
+      "hora_salida": "TENTATIVO",
+      "aeropuerto_origen": "PVG",
+      "aeropuerto_origen_nombre": "Aeropuerto Internacional Pudong de Shanghai",
+      "aerolinea": "TENTATIVO — Hainan Airlines / Air China / China Eastern",
+      "numero_vuelo": "TENTATIVO",
+      "clase": "Premium Economy",
+      "duracion_horas": 12,
+      "nota": "Salir del hotel 3.5-4h antes; DiDi directo o Maglev desde Metro L2 Longyang Rd a PVG (~8 min)"
+    },
+    "llegada_lax": {
+      "_comentario": "TENTATIVO — rellenar con horario real al comprar boletos. Los vuelos PVG-LAX llegan el mismo día calendario (cruzan la línea de fecha en sentido inverso).",
+      "fecha": "2027-06-06",
+      "hora_llegada": "TENTATIVO",
+      "aeropuerto_destino": "LAX",
+      "aeropuerto_nombre": "Los Angeles International Airport",
+      "nota": "Conexión terrestre LAX a casa o vuelo corto a SAN/TIJ según logística de regreso"
+    }
+  },
+
+  "trenes": {
+    "beijing_xian": {
+      "_comentario": "TENTATIVO — reservar en 12306.cn o Trip.com aproximadamente 30 días antes de la fecha de viaje.",
+      "fecha": "2027-05-26",
+      "hora_salida": "TENTATIVO",
+      "estacion_origen": "Beijing West Railway Station (Beijing Xi)",
+      "estacion_destino": "Xi'an North Railway Station (Xi'an Bei)",
+      "tren": "TENTATIVO — Serie G (alta velocidad)",
+      "duracion_horas": 5,
+      "clase": "Business o Primera para mayor espacio y reclinación",
+      "metro_origen": "Metro L7 o L9 a Estación Beijing West",
+      "metro_destino": "Metro L4 desde Xi'an Norte hacia centro; transbordo a L2 Zhonglou"
+    },
+    "xian_chengdu": {
+      "_comentario": "TENTATIVO — reservar en 12306.cn o Trip.com aproximadamente 30 días antes de la fecha de viaje.",
+      "fecha": "2027-05-28",
+      "hora_salida": "TENTATIVO",
+      "estacion_origen": "Xi'an North Railway Station (Xi'an Bei)",
+      "estacion_destino": "Chengdu East Railway Station (Chengdu Dong)",
+      "tren": "TENTATIVO — Serie G (alta velocidad)",
+      "duracion_horas": 3.5,
+      "clase": "Business o Primera para mayor espacio y reclinación",
+      "metro_origen": "Metro L4 a Xi'an Norte (desde centro; verificar transbordo desde L2)",
+      "metro_destino": "Metro L2 o L7 desde Chengdu Este hacia Chunxi Road / hotel"
+    }
+  },
+
+  "notas_generales": [
+    "TODAS las fechas y horarios de vuelo son TENTATIVOS hasta comprar boletos.",
+    "Flujo correcto: 1) Comprar boletos → 2) Editar este archivo → 3) python3 generar_calendario.py → 4) Importar viaje.ics a Google Calendar.",
+    "Horarios de China usan UTC+8 (CST — China Standard Time). China no tiene horario de verano.",
+    "Horarios de México (Tijuana) en mayo-junio usan UTC-7 (PDT — Pacific Daylight Time).",
+    "Trenes disponibles para reservar ~90 días antes en 12306.cn o Trip.com.",
+    "Vuelo doméstico CTU/TFU→PVG: comparar en Trip.com, Ctrip y Google Flights.",
+    "Premium Economy en Hainan Airlines disponible en sus rutas de largo recorrido (787 y A330).",
+    "Hainan Airlines y aerolíneas chinas NO suman millas a Amex Aeroméxico; usar la tarjeta igual para seguros y beneficios de compra."
+  ]
+}
