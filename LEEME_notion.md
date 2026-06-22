@@ -45,7 +45,8 @@
 1. Nueva página → **Import** → **CSV** → seleccionar `restaurantes.csv`.
 2. Ajustes después de importar:
    - `Michelin`: cambiar tipo a **Select** con opciones (Bib Gourmand, 1 estrella, Recomendado, No Michelin).
-   - `Reserva`: cambiar tipo a **Select** (Sí, No, Con mucho tiempo).
+   - `Reserva`: cambiar tipo a **Select** (Sí, No, Sí — URGENTE).
+   - `Anticipacion_reserva`: dejar como texto o cambiar a **Select** — contiene el tiempo exacto (ej. "4-6 semanas antes") y también cuándo ir si no se reserva.
    - `Picante` y `Apto_sin_pescado`: cambiar tipo a **Checkbox**.
 
 ---
